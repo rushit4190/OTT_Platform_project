@@ -1,0 +1,20 @@
+{
+	"info": {
+		"_postman_id": "12102a22-6bbe-48ae-adb0-bd76c80e3e54",
+		"name": "Home Page API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30201486",
+		"_collection_link": "https://speeding-station-394320.postman.co/workspace/NextLeap_OTT_Platform_Project~e7d07bd9-be5c-496b-8fe1-f7cbb23170d5/collection/30201486-12102a22-6bbe-48ae-adb0-bd76c80e3e54?action=share&source=collection_link&creator=30201486"
+	},
+	"item": [
+		{
+			"name": "Home Page request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://ott-platform-project-env.eba-duv2drzm.us-east-1.elasticbeanstalk.com/ottplatform/v1/home"
+			},
+			"response": []
+		}
+	]
+}

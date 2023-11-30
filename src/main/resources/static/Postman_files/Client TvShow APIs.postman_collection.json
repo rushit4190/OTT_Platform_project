@@ -1,0 +1,344 @@
+{
+	"info": {
+		"_postman_id": "b4a26bb6-2d82-4191-b428-cf6a41558e2f",
+		"name": "Client TvShow APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30201486",
+		"_collection_link": "https://speeding-station-394320.postman.co/workspace/NextLeap_OTT_Platform_Project~e7d07bd9-be5c-496b-8fe1-f7cbb23170d5/collection/30201486-b4a26bb6-2d82-4191-b428-cf6a41558e2f?action=share&source=collection_link&creator=30201486"
+	},
+	"item": [
+		{
+			"name": "Get TvShow by title",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ott-platform-project-env.eba-duv2drzm.us-east-1.elasticbeanstalk.com/ottplatform/v1/tvshows/title/:tvshowTitle",
+					"protocol": "http",
+					"host": [
+						"ott-platform-project-env",
+						"eba-duv2drzm",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"ottplatform",
+						"v1",
+						"tvshows",
+						"title",
+						":tvshowTitle"
+					],
+					"variable": [
+						{
+							"key": "tvshowTitle",
+							"value": "narcos",
+							"description": "Title of the TvShow "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get TvShow by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ott-platform-project-env.eba-duv2drzm.us-east-1.elasticbeanstalk.com/ottplatform/v1/tvshows/id/:tvshowId",
+					"protocol": "http",
+					"host": [
+						"ott-platform-project-env",
+						"eba-duv2drzm",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"ottplatform",
+						"v1",
+						"tvshows",
+						"id",
+						":tvshowId"
+					],
+					"variable": [
+						{
+							"key": "tvshowId",
+							"value": "d999b562-dadc-481e-baed-565ef60c917a",
+							"description": "Id of the TvShow"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Season Info by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ott-platform-project-env.eba-duv2drzm.us-east-1.elasticbeanstalk.com/ottplatform/v1/tvshows/seasons/:seasonInfoId",
+					"protocol": "http",
+					"host": [
+						"ott-platform-project-env",
+						"eba-duv2drzm",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"ottplatform",
+						"v1",
+						"tvshows",
+						"seasons",
+						":seasonInfoId"
+					],
+					"variable": [
+						{
+							"key": "seasonInfoId",
+							"value": "ab9797a6-c35e-428b-ae0b-71aab364d059",
+							"description": "Id of the Season"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Episode Info by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ott-platform-project-env.eba-duv2drzm.us-east-1.elasticbeanstalk.com/ottplatform/v1/tvshows/seasons/episodes/:episodeInfoId",
+					"protocol": "http",
+					"host": [
+						"ott-platform-project-env",
+						"eba-duv2drzm",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"ottplatform",
+						"v1",
+						"tvshows",
+						"seasons",
+						"episodes",
+						":episodeInfoId"
+					],
+					"variable": [
+						{
+							"key": "episodeInfoId",
+							"value": "98abccfc-4111-4f13-b579-580f94a45ed2",
+							"description": "Id of the Episode"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get TvShows by language via pagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ott-platform-project-env.eba-duv2drzm.us-east-1.elasticbeanstalk.com/ottplatform/v1/tvshows/language/:language?pageNo=&pageSize=",
+					"protocol": "http",
+					"host": [
+						"ott-platform-project-env",
+						"eba-duv2drzm",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"ottplatform",
+						"v1",
+						"tvshows",
+						"language",
+						":language"
+					],
+					"query": [
+						{
+							"key": "pageNo",
+							"value": "",
+							"description": "Enter page no, by default its 0"
+						},
+						{
+							"key": "pageSize",
+							"value": "",
+							"description": "Enter page size, by default its 5"
+						}
+					],
+					"variable": [
+						{
+							"key": "language",
+							"value": "english",
+							"description": "desired language for content to watch"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get TvShows by genre via pagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ott-platform-project-env.eba-duv2drzm.us-east-1.elasticbeanstalk.com/ottplatform/v1/tvshows/genre/:genre?pageNo&pageSize",
+					"protocol": "http",
+					"host": [
+						"ott-platform-project-env",
+						"eba-duv2drzm",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"ottplatform",
+						"v1",
+						"tvshows",
+						"genre",
+						":genre"
+					],
+					"query": [
+						{
+							"key": "pageNo",
+							"value": null,
+							"description": "Enter page no, by default its 0"
+						},
+						{
+							"key": "pageSize",
+							"value": null,
+							"description": "Enter page no, by default its 5"
+						}
+					],
+					"variable": [
+						{
+							"key": "genre",
+							"value": "drama",
+							"description": "desired genre of content to watch"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get TvShows by descending order of ratings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ott-platform-project-env.eba-duv2drzm.us-east-1.elasticbeanstalk.com/ottplatform/v1/tvshows/top?pageNo=1&pageSize",
+					"protocol": "http",
+					"host": [
+						"ott-platform-project-env",
+						"eba-duv2drzm",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"ottplatform",
+						"v1",
+						"tvshows",
+						"top"
+					],
+					"query": [
+						{
+							"key": "pageNo",
+							"value": "1",
+							"description": "Enter page no, by default its 0"
+						},
+						{
+							"key": "pageSize",
+							"value": null,
+							"description": "Enter page size, by default its 5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get latest TvShows",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ott-platform-project-env.eba-duv2drzm.us-east-1.elasticbeanstalk.com/ottplatform/v1/tvshows/latest?pageNo=&pageSize",
+					"protocol": "http",
+					"host": [
+						"ott-platform-project-env",
+						"eba-duv2drzm",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"ottplatform",
+						"v1",
+						"tvshows",
+						"latest"
+					],
+					"query": [
+						{
+							"key": "pageNo",
+							"value": "",
+							"description": "Enter page no, by default its 0"
+						},
+						{
+							"key": "pageSize",
+							"value": null,
+							"description": "Enter page size, by default its 5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get list of TvShows in different categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ott-platform-project-env.eba-duv2drzm.us-east-1.elasticbeanstalk.com/ottplatform/v1/tvshows?pageNo=&pageSize",
+					"protocol": "http",
+					"host": [
+						"ott-platform-project-env",
+						"eba-duv2drzm",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"ottplatform",
+						"v1",
+						"tvshows"
+					],
+					"query": [
+						{
+							"key": "pageNo",
+							"value": "",
+							"description": "Enter page No, by default it is 0"
+						},
+						{
+							"key": "pageSize",
+							"value": null,
+							"description": "Enter page size, by default it is 5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

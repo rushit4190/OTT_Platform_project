@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "53cc95d9-f1b5-4c54-a1e5-d174f4ac265f",
+		"name": "TvShow DB development APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30201486",
+		"_collection_link": "https://speeding-station-394320.postman.co/workspace/NextLeap_OTT_Platform_Project~e7d07bd9-be5c-496b-8fe1-f7cbb23170d5/collection/30201486-53cc95d9-f1b5-4c54-a1e5-d174f4ac265f?action=share&source=collection_link&creator=30201486"
+	},
+	"item": [
+		{
+			"name": "Add TvShow to DB",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Narcos\",\n    \"description\":\"Narcos is an American crime drama television series created and produced by Chris Brancato, Carlo Bernard, and Doug Miro.\",\n    \"releaseDate\":\"2015-08-28\",\n    \"endDate\":\"2017-09-01\",\n    \"rating\":\"8.8\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://ott-platform-project-env.eba-duv2drzm.us-east-1.elasticbeanstalk.com/ottplatform/v1/addtvshow/"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Season Info to DB",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Season 1\",\n    \"description\":\"Season 1 of Breaking Bad\",\n    \"releaseDate\":\"1001-01-01\",\n    \"rating\": \"0\",\n    \"seasonIndex\":\"1\",\n    \"tvShowId\":\"f18ff3f5-9714-4c31-aa00-e5c29710c0f6\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://ott-platform-project-env.eba-duv2drzm.us-east-1.elasticbeanstalk.com/ottplatform/v1/addseasoninfo/"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Episode Info to DB",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Episode 1\",\n    \"description\":\"Episode 1 of Season 1 of Breaking Bad\",\n    \"releaseDate\":\"1001-01-01\",\n    \"episodeDuration\":\"60\",\n    \"rating\": \"0\",\n    \"episodeIndex\":\"1\",\n    \"seasonInfoId\":\"5a28d22f-6ebc-4bf7-9d23-032faf5066a6\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://ott-platform-project-env.eba-duv2drzm.us-east-1.elasticbeanstalk.com/ottplatform/v1/addepisodeinfo/"
+			},
+			"response": []
+		},
+		{
+			"name": "Add TvShow poster",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "poster",
+							"description": "TvShow poster file",
+							"type": "file",
+							"src": "/Users/rushit/Documents/Study/Coding/NextLeap/OTT_platform_project/src/main/resources/static/TvShowImages/Game_of_Thrones_title_card.jpg"
+						},
+						{
+							"key": "title",
+							"value": "Game of Thrones",
+							"description": "TvShow tile",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://ott-platform-project-env.eba-duv2drzm.us-east-1.elasticbeanstalk.com/ottplatform/v1/addtvshow/poster"
+			},
+			"response": []
+		},
+		{
+			"name": "Add TvShow genre",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "genre",
+							"value": "Thriller",
+							"description": "TvShow genre",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "Breaking Bad",
+							"description": "TvShow title",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://ott-platform-project-env.eba-duv2drzm.us-east-1.elasticbeanstalk.com/ottplatform/v1/addtvshow/genre"
+			},
+			"response": []
+		},
+		{
+			"name": "Add TvShow language",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "language",
+							"value": "English",
+							"description": "TvShow language",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "breaking bad",
+							"description": "TvShow title",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://ott-platform-project-env.eba-duv2drzm.us-east-1.elasticbeanstalk.com/ottplatform/v1/addtvshow/language"
+			},
+			"response": []
+		},
+		{
+			"name": "Add cast crew to TvShow",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"castCrewId\": \"871a8883-fcbb-4285-a74f-c8981f9f16cf\",\n    \"tvShowTitle\": \"Breaking Bad\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://ott-platform-project-env.eba-duv2drzm.us-east-1.elasticbeanstalk.com/ottplatform/v1/addtvshow/tvShowCastCrew"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Episode Language video data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "video",
+							"type": "file",
+							"src": "/Users/rushit/Documents/Study/Coding/NextLeap/OTT_platform_project/src/main/resources/static/sampleVideoFile.png"
+						},
+						{
+							"key": "episodeId",
+							"value": "98abccfc-4111-4f13-b579-580f94a45ed2",
+							"type": "text"
+						},
+						{
+							"key": "language",
+							"value": "English",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://ott-platform-project-env.eba-duv2drzm.us-east-1.elasticbeanstalk.com/ottplatform/v1/addepisodeinfo/episodeVideo"
+			},
+			"response": []
+		}
+	]
+}

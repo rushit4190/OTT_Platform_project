@@ -1,0 +1,273 @@
+{
+	"info": {
+		"_postman_id": "91af46c4-11e5-4aec-af23-e8f0821ce75a",
+		"name": "Client Movie APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30201486",
+		"_collection_link": "https://speeding-station-394320.postman.co/workspace/NextLeap_OTT_Platform_Project~e7d07bd9-be5c-496b-8fe1-f7cbb23170d5/collection/30201486-91af46c4-11e5-4aec-af23-e8f0821ce75a?action=share&source=collection_link&creator=30201486"
+	},
+	"item": [
+		{
+			"name": "Get movies by language via pagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ott-platform-project-env.eba-duv2drzm.us-east-1.elasticbeanstalk.com/ottplatform/v1/movies/language/:language?pageNo&pageSize",
+					"protocol": "http",
+					"host": [
+						"ott-platform-project-env",
+						"eba-duv2drzm",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"ottplatform",
+						"v1",
+						"movies",
+						"language",
+						":language"
+					],
+					"query": [
+						{
+							"key": "pageNo",
+							"value": null,
+							"description": "Enter page no, by default its 0"
+						},
+						{
+							"key": "pageSize",
+							"value": null,
+							"description": "Enter page size, by default its 5"
+						}
+					],
+					"variable": [
+						{
+							"key": "language",
+							"value": "english",
+							"description": "desired language for content to watch"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get movies by genre via pagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ott-platform-project-env.eba-duv2drzm.us-east-1.elasticbeanstalk.com/ottplatform/v1/movies/genre/:genre?pageNo&pageSize",
+					"protocol": "http",
+					"host": [
+						"ott-platform-project-env",
+						"eba-duv2drzm",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"ottplatform",
+						"v1",
+						"movies",
+						"genre",
+						":genre"
+					],
+					"query": [
+						{
+							"key": "pageNo",
+							"value": null,
+							"description": "Enter page no, by default its 0"
+						},
+						{
+							"key": "pageSize",
+							"value": null,
+							"description": "Enter page size, by default its 5"
+						}
+					],
+					"variable": [
+						{
+							"key": "genre",
+							"value": "Kids",
+							"description": "desired genre for content to watch"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get movies by descending order of ratings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ott-platform-project-env.eba-duv2drzm.us-east-1.elasticbeanstalk.com/ottplatform/v1/movies/top?pageNo&pageSize",
+					"protocol": "http",
+					"host": [
+						"ott-platform-project-env",
+						"eba-duv2drzm",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"ottplatform",
+						"v1",
+						"movies",
+						"top"
+					],
+					"query": [
+						{
+							"key": "pageNo",
+							"value": null,
+							"description": "Enter page no, by default its 0"
+						},
+						{
+							"key": "pageSize",
+							"value": null,
+							"description": "Enter page size, by default its 5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get latest movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ott-platform-project-env.eba-duv2drzm.us-east-1.elasticbeanstalk.com/ottplatform/v1/movies/latest?pageNo&pageSize",
+					"protocol": "http",
+					"host": [
+						"ott-platform-project-env",
+						"eba-duv2drzm",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"ottplatform",
+						"v1",
+						"movies",
+						"latest"
+					],
+					"query": [
+						{
+							"key": "pageNo",
+							"value": null,
+							"description": "Enter page no, by default its 0"
+						},
+						{
+							"key": "pageSize",
+							"value": null,
+							"description": "Enter page size, by default its 5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get movie by title",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ott-platform-project-env.eba-duv2drzm.us-east-1.elasticbeanstalk.com/ottplatform/v1/movies/title/:movieTitle",
+					"protocol": "http",
+					"host": [
+						"ott-platform-project-env",
+						"eba-duv2drzm",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"ottplatform",
+						"v1",
+						"movies",
+						"title",
+						":movieTitle"
+					],
+					"variable": [
+						{
+							"key": "movieTitle",
+							"value": "interstellar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get movie by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ott-platform-project-env.eba-duv2drzm.us-east-1.elasticbeanstalk.com/ottplatform/v1/movies/id/:movieId",
+					"protocol": "http",
+					"host": [
+						"ott-platform-project-env",
+						"eba-duv2drzm",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"ottplatform",
+						"v1",
+						"movies",
+						"id",
+						":movieId"
+					],
+					"variable": [
+						{
+							"key": "movieId",
+							"value": "e7eb0326-2966-4431-b17c-d2b67b6103d5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get list of movies in different categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ott-platform-project-env.eba-duv2drzm.us-east-1.elasticbeanstalk.com/ottplatform/v1/movies?pageNo&pageSize",
+					"protocol": "http",
+					"host": [
+						"ott-platform-project-env",
+						"eba-duv2drzm",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"ottplatform",
+						"v1",
+						"movies"
+					],
+					"query": [
+						{
+							"key": "pageNo",
+							"value": null
+						},
+						{
+							"key": "pageSize",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

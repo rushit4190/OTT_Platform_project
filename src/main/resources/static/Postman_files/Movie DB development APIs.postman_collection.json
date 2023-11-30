@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "c08cb0c1-3922-4742-abd2-f30a5eb3e15f",
+		"name": "Movie DB development APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30201486",
+		"_collection_link": "https://speeding-station-394320.postman.co/workspace/NextLeap_OTT_Platform_Project~e7d07bd9-be5c-496b-8fe1-f7cbb23170d5/collection/30201486-c08cb0c1-3922-4742-abd2-f30a5eb3e15f?action=share&source=collection_link&creator=30201486"
+	},
+	"item": [
+		{
+			"name": "Check connection",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/ottplatform/v1/"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Movie to DB",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Dil Chahta Hai\",\n    \"description\" : \" The film tells the story of three friends and how three young men understand the responsibilities with age.\",\n    \"releaseDate\" : \"2001-07-24\",\n    \"movieDuration\" : \"183\",\n    \"rating\" : \"8.1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://ott-platform-project-env.eba-duv2drzm.us-east-1.elasticbeanstalk.com/ottplatform/v1/addmovie/"
+			},
+			"response": []
+		},
+		{
+			"name": "Add movie poster",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "poster",
+							"description": "Movie poster",
+							"type": "file",
+							"src": "/Users/rushit/Documents/Study/Coding/NextLeap/OTT_platform_project/src/main/resources/static/movieImages/3_idiots_poster.jpg"
+						},
+						{
+							"key": "title",
+							"value": "3 idiots",
+							"description": "Movie Title",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://ott-platform-project-env.eba-duv2drzm.us-east-1.elasticbeanstalk.com/ottplatform/v1/addmovie/poster",
+					"protocol": "http",
+					"host": [
+						"ott-platform-project-env",
+						"eba-duv2drzm",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"ottplatform",
+						"v1",
+						"addmovie",
+						"poster"
+					],
+					"query": [
+						{
+							"key": "posterFile",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add movie genre",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "genre",
+							"value": "Comedy",
+							"description": "Movie genre",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "Dil Chahta Hai",
+							"description": "Movie title",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://ott-platform-project-env.eba-duv2drzm.us-east-1.elasticbeanstalk.com/ottplatform/v1/addmovie/genre"
+			},
+			"response": []
+		},
+		{
+			"name": "Add movie language video data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "video",
+							"type": "file",
+							"src": "/Users/rushit/Documents/Study/Coding/NextLeap/OTT_platform_project/src/main/resources/static/sampleVideoFile.png"
+						},
+						{
+							"key": "title",
+							"value": "3 Idiots",
+							"type": "text"
+						},
+						{
+							"key": "language",
+							"value": "Hindi",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8080/ottplatform/v1/addmovie/movieLanguageVideo"
+			},
+			"response": []
+		},
+		{
+			"name": "Add cast Crew to movie ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"castCrewId\": \"43e91f7e-ebc7-411d-a207-ec1edea84fed\",\n    \"movieTitle\": \"Dil Chahta Hai\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://ott-platform-project-env.eba-duv2drzm.us-east-1.elasticbeanstalk.com/ottplatform/v1/addmovie/movieCastCrew"
+			},
+			"response": []
+		}
+	]
+}
